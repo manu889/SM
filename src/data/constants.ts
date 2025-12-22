@@ -3,16 +3,19 @@ export const BUSINESS_INFO = {
   tagline: 'Your Trusted Travel Partner in Mysore',
   phone: '+91 6363206398',
   whatsapp: '+91 6363206398',
-  email: 'info@smtoursandtravel.com',
-  address: 'Mysuru, Karnataka 570001',
+  email: 'support@smtoursandtravel.com',
+  alternateEmail: 'smtoursandtravelmy@gmail.com',
+  address: '2ND FLOOR, 541/1 CH10, WESTCROSS ROAD, Sunnadakeri, KUMBARGERI (BESTAGERI), Rahmania Mohalla, Mysuru, Karnataka 570004',
   addressDetails: {
-    street: 'Main Road, Saraswathipuram',
+    street: '2ND FLOOR, 541/1 CH10, WESTCROSS ROAD, Sunnadakeri',
+    area: 'KUMBARGERI (BESTAGERI)',
+    mohalla: 'Rahmania Mohalla',
     city: 'Mysuru',
     state: 'Karnataka',
-    zipcode: '570001',
+    zipcode: '570004',
     country: 'India'
   },
-  googleMapsUrl: 'https://maps.google.com/?q=Mysuru+Karnataka+570001',
+  googleMapsUrl: 'https://maps.google.com/?q=2ND+FLOOR+541/1+CH10+WESTCROSS+ROAD+Sunnadakeri+Mysuru+570004',
   googleRatings: {
     rating: 4.9,
     reviewCount: 200

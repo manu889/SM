@@ -76,9 +76,14 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-base font-bold text-slate-900 mb-2">Email</h3>
                 <p className="text-sm text-slate-600 mb-3">Send us your queries</p>
-                <a href={`mailto:${BUSINESS_INFO.email}`} className="text-base font-semibold text-blue-600 hover:text-blue-700 break-all">
-                  {BUSINESS_INFO.email}
-                </a>
+                <div className="space-y-2">
+                  <a href={`mailto:${BUSINESS_INFO.email}`} className="text-base font-semibold text-blue-600 hover:text-blue-700 break-all block">
+                    {BUSINESS_INFO.email}
+                  </a>
+                  <a href={`mailto:${BUSINESS_INFO.alternateEmail}`} className="text-base font-semibold text-blue-600 hover:text-blue-700 break-all block">
+                    {BUSINESS_INFO.alternateEmail}
+                  </a>
+                </div>
               </div>
 
               {/* Address */}

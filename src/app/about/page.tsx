@@ -166,7 +166,10 @@ export default function AboutPage() {
                     </svg>
                     <div>
                       <div className="font-semibold">Email</div>
-                      <a href={`mailto:${BUSINESS_INFO.email}`} className="hover:underline">{BUSINESS_INFO.email}</a>
+                      <div className="space-y-1">
+                        <a href={`mailto:${BUSINESS_INFO.email}`} className="hover:underline block">{BUSINESS_INFO.email}</a>
+                        <a href={`mailto:${BUSINESS_INFO.alternateEmail}`} className="hover:underline block">{BUSINESS_INFO.alternateEmail}</a>
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -175,8 +178,7 @@ export default function AboutPage() {
                     </svg>
                     <div>
                       <div className="font-semibold">Address</div>
-                      <div>{BUSINESS_INFO.addressDetails.street}</div>
-                      <div>{BUSINESS_INFO.addressDetails.city}, {BUSINESS_INFO.addressDetails.state} {BUSINESS_INFO.addressDetails.zipcode}</div>
+                      <div className="text-sm">{BUSINESS_INFO.address}</div>
                     </div>
                   </div>
                 </div>
