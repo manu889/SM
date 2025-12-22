@@ -180,7 +180,7 @@ export default async function TourPackagePage({ params }: { params: Promise<{ sl
                 <div className="text-center mb-6">
                   <p className="text-sm text-slate-600 mb-2">Starting from</p>
                   <p className="text-4xl font-bold text-emerald-600">₹{tour.price.toLocaleString()}</p>
-                  <p className="text-xs text-slate-500 mt-1">Per vehicle (not per person)</p>
+                  <p className="text-xs text-slate-500 mt-1">Per vehicle (not per person)*</p>
                 </div>
                 <div className="space-y-3 mb-6 text-sm">
                   <div className="flex justify-between border-b border-emerald-200 pb-2">

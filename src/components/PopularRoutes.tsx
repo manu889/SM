@@ -34,8 +34,9 @@ export default function PopularRoutes() {
                   <span className="text-base">⏱️</span>
                   <span>{route.duration}</span>
                 </div>
-                <div className="flex items-center gap-2 pt-2">
+                <div className="flex items-center gap-1 pt-2">
                   <span className="text-lg font-bold text-amber-600">{route.price}</span>
+                  <span className="text-lg font-bold text-amber-600">*</span>
                 </div>
               </div>
               <div className="pt-3 border-t border-slate-100 space-y-2">
@@ -58,7 +59,10 @@ export default function PopularRoutes() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="mt-8 text-center">
+          <p className="text-xs text-slate-500 mb-6">
+            * Prices shown are starting rates per vehicle (not per person). Final pricing depends on vehicle type, passenger count, and additional services. Call +91 6363206398 for exact quote.
+          </p>
           <Link href="/routes/mysore-to-ooty" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-amber-700 px-8 py-4 text-white font-semibold hover:from-amber-700 hover:to-amber-800 transition-all shadow-lg hover:shadow-xl">
             View All Routes
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

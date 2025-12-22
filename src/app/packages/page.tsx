@@ -86,7 +86,7 @@ export default function PackagesPage() {
                         <div className="flex items-center justify-between">
                           <div>
                             <span className="text-xs text-slate-500 block">Starting from</span>
-                            <span className="text-base font-bold text-amber-600">₹{tour.price.toLocaleString()}</span>
+                            <span className="text-base font-bold text-amber-600">₹{tour.price.toLocaleString()}*</span>
                           </div>
                           <span className="text-sm font-semibold text-amber-600 flex items-center gap-1">
                             View Details
@@ -141,7 +141,7 @@ export default function PackagesPage() {
                         <div className="flex items-center justify-between">
                           <div>
                             <span className="text-xs text-slate-500 block">Starting from</span>
-                            <span className="text-base font-bold text-amber-600">₹{tour.price.toLocaleString()}</span>
+                            <span className="text-base font-bold text-amber-600">₹{tour.price.toLocaleString()}*</span>
                           </div>
                           <span className="text-sm font-semibold text-amber-600 flex items-center gap-1">
                             View Details
@@ -196,7 +196,7 @@ export default function PackagesPage() {
                         <div className="flex items-center justify-between">
                           <div>
                             <span className="text-xs text-slate-500 block">Starting from</span>
-                            <span className="text-base font-bold text-amber-600">₹{tour.price.toLocaleString()}</span>
+                            <span className="text-base font-bold text-amber-600">₹{tour.price.toLocaleString()}*</span>
                           </div>
                           <span className="text-sm font-semibold text-amber-600 flex items-center gap-1">
                             View Details
@@ -356,6 +356,13 @@ export default function PackagesPage() {
               </div>
             </div>
           </aside>
+        </div>
+
+        {/* Pricing Disclaimer */}
+        <div className="mt-12 bg-amber-50 border-2 border-amber-200 rounded-xl p-6 text-center max-w-3xl mx-auto">
+          <p className="text-sm text-slate-700">
+            <strong>*Pricing Disclaimer:</strong> Package prices are starting rates per vehicle and vary based on group size, vehicle type, season, and special requirements. Final pricing will be confirmed after discussing your specific travel dates and preferences. Please contact us for accurate quotation.
+          </p>
         </div>
       </div>
     </main>

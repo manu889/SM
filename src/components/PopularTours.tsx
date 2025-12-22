@@ -55,7 +55,7 @@ export default function PopularTours() {
                 <div className="flex items-center justify-between">
                   <div>
                     <span className="text-xs text-slate-500 block">Starting from</span>
-                    <span className="text-base font-bold text-amber-600">₹{tour.price.toLocaleString()}</span>
+                    <span className="text-base font-bold text-amber-600">₹{tour.price.toLocaleString()}*</span>
                   </div>
                   <div className="flex items-center gap-1 text-amber-600 font-semibold text-sm">
                     <span>Explore</span>
@@ -69,7 +69,10 @@ export default function PopularTours() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-6 mb-6">
+          <p className="text-xs text-slate-500 mb-6">
+            * Prices shown are starting rates per vehicle (not per person). Final pricing depends on vehicle type, passenger count, and additional services.
+          </p>
           <Link href="/packages" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-8 py-4 font-bold text-white shadow-lg shadow-amber-500/30 transition-all hover:shadow-xl hover:shadow-amber-500/40">
             <span>View All Packages</span>
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

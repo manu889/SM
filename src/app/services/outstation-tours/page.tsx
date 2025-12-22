@@ -106,7 +106,7 @@ export default function OutstationToursPage() {
                         {route.duration}
                       </p>
                       <p className="flex items-center gap-2 text-lg font-bold text-amber-600">
-                        💰 {route.price}
+                        💰 Starting from {route.price}*
                       </p>
                     </div>
                   </div>
@@ -114,8 +114,14 @@ export default function OutstationToursPage() {
               </div>
             </section>
 
-            {/* Pricing Information */}
-            <section className="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl">
+            {/* Pricing Disclaimer */}
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <p className="text-sm text-slate-700">
+                <strong className="text-blue-700">*Note:</strong> Prices shown are base rates per route for standard vehicles. Final cost depends on vehicle type (Sedan/SUV/Innova), exact pickup/drop location, toll charges, and parking fees. Contact us for exact quotation.
+              </p>
+            </div>
+
+            <section>
               <h2 className="text-3xl font-bold text-slate-900 mb-6">Transparent Pricing</h2>
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-4 bg-white rounded-lg">
@@ -136,7 +142,7 @@ export default function OutstationToursPage() {
                 </div>
               </div>
               <p className="text-sm text-slate-600 mt-4">
-                *Prices include driver charges. Toll, parking & permit charges extra.
+                * Prices include driver charges. Toll, parking and permit charges extra.
               </p>
             </section>
 

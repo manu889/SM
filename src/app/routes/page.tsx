@@ -71,7 +71,7 @@ export default function RoutesPage() {
                     {/* Price */}
                     <div className="mb-4">
                       <span className="text-xs text-slate-500 block mb-1">Starting from</span>
-                      <span className="text-base font-bold text-amber-600">{route.price}</span>
+                      <span className="text-base font-bold text-amber-600">{route.price}*</span>
                     </div>
 
                     {/* Description */}
@@ -102,6 +102,12 @@ export default function RoutesPage() {
                     </div>
                   </Link>
                 ))}
+              </div>
+
+              <div className="mt-6 text-center">
+                <p className="text-xs text-slate-500">
+                  * Prices shown are starting rates per vehicle (not per person). Final pricing depends on vehicle type, passenger count, and additional services. Call +91 6363206398 for exact quote.
+                </p>
               </div>
             </section>
 
