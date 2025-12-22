@@ -109,6 +109,9 @@ export default function Footer() {
               <Link href="/terms" className="hover:text-amber-400 transition-colors">Terms & Conditions</Link>
             </div>
           </div>
+          <div className="text-center mt-4 pt-4 border-t border-slate-700 text-xs text-gray-600">
+            <p>Designed & Developed by <a href="https://hffglobal.com" target="_blank" rel="noopener noreferrer" className="text-amber-500 hover:text-amber-400 transition-colors font-semibold">HFFGLOBAL</a></p>
+          </div>
         </div>
       </div>
     </footer>
