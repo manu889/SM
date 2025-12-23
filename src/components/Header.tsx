@@ -45,7 +45,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isHomePage 
-          ? (isScrolled ? 'bg-white shadow-md py-2' : 'bg-white/95 backdrop-blur-sm py-4 border-b border-gray-100')
+          ? (isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4')
           : (isScrolled ? 'bg-white shadow-md py-2' : 'bg-white/95 backdrop-blur-sm py-4 border-b border-gray-100')
       }`}
     >
@@ -143,7 +143,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 animate-fade-in">
+          <div className="lg:hidden mt-4 pb-4 animate-fade-in bg-white rounded-lg shadow-lg">
             <div className="flex flex-col gap-2">
               {NAV_LINKS.map((link) => (
                 <div key={link.href}>
@@ -166,7 +166,7 @@ export default function Header() {
                         </svg>
                       </button>
                       {openDropdown === link.label && (
-                        <div className="ml-4 mt-1 flex flex-col gap-1">
+                        <div className="ml-4 mt-1 flex flex-col gap-1 bg-gray-50 rounded-lg p-2">
                           {link.dropdown.map((item) => (
                             <Link
                               key={item.href}

@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50 pt-16 overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-cover bg-center opacity-5"
+      <div className="absolute inset-0 bg-cover bg-center opacity-20"
            style={{ backgroundImage: "url('/Images/Mysore.jpg')" }}
            aria-hidden="true" />
 
