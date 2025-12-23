@@ -119,7 +119,7 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
   const labelSize = compact ? 'text-xs' : 'text-sm';
 
   return (
-    <form onSubmit={handleSubmit} className={`${spacing} bg-white ${sectionPadding} rounded-xl shadow-lg ${compact ? 'max-h-[calc(100vh-200px)] overflow-y-auto overflow-x-hidden' : ''}`}>
+    <form onSubmit={handleSubmit} className={`${spacing} bg-white ${sectionPadding} rounded-xl shadow-lg`}>
       {/* Service Type Selection - Horizontal */}
       <div className={`bg-gray-50 ${compact ? 'p-2.5' : 'p-4'} rounded-lg`}>
         <label className={`block ${headingSize} font-bold text-gray-900 ${compact ? 'mb-1.5' : 'mb-2'}`}>

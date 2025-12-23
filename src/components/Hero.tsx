@@ -53,7 +53,7 @@ export default function Hero() {
             </div>
 
             {/* Quick Contact CTAs */}
-            <div className="flex flex-wrap gap-2 sm:gap-3">
+            <div className="hidden lg:flex flex-wrap gap-2 sm:gap-3">
               <a
                 href={`tel:${PHONE}`}
                 className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-bold transition-all shadow-lg shadow-amber-500/30 text-sm sm:text-base"
@@ -99,41 +99,17 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Vehicle Showcase */}
-            <div className="pt-6 border-t border-gray-200">
-              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Our Premium Fleet</p>
-              <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
-                {[
-                  { name: 'Dzire', img: '/Images/Vehicles/Dzire.png' },
-                  { name: 'Innova', img: '/Images/Vehicles/Innova.png' },
-                  { name: 'Crysta', img: '/Images/Vehicles/Crysta.webp' },
-                  { name: 'Ertiga', img: '/Images/Vehicles/Ertiga.png' }
-                ].map((vehicle) => (
-                  <div key={vehicle.name} className="flex-shrink-0 bg-white rounded-lg p-3 shadow-md border border-gray-100 hover:shadow-lg transition-shadow w-24">
-                    <div className="relative h-12 mb-2">
-                      <Image
-                        src={vehicle.img}
-                        alt={`${vehicle.name} - Taxi Service Mysore`}
-                        fill
-                        className="object-contain"
-                        sizes="96px"
-                      />
-                    </div>
-                    <p className="text-xs font-semibold text-center text-gray-800">{vehicle.name}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+
           </div>
 
           {/* Right - Booking Form */}
-          <div className="lg:sticky lg:top-24 w-full max-w-full overflow-hidden">
+          <div className="lg:sticky lg:top-24 w-full max-w-full">
             <div className="bg-white rounded-2xl shadow-2xl p-1 max-w-full">
               <div className="bg-gradient-to-br from-amber-500 to-orange-600 text-white text-center py-3 sm:py-4 rounded-t-xl">
                 <h3 className="text-lg sm:text-xl font-bold">Book Your Cab Now</h3>
                 <p className="text-xs sm:text-sm text-amber-50 mt-1">Instant confirmation • Best rates</p>
               </div>
-              <div className="p-3 sm:p-4 lg:p-6 overflow-x-hidden">
+              <div className="p-3 sm:p-4 lg:p-6">
                 <BookingForm compact={true} />
               </div>
             </div>
