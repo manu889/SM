@@ -119,17 +119,17 @@ export default function BookingForm({ compact = false }: BookingFormProps) {
   const labelSize = compact ? 'text-xs' : 'text-sm';
 
   return (
-    <form onSubmit={handleSubmit} className={`${spacing} bg-white ${sectionPadding} rounded-xl shadow-lg ${compact ? 'max-h-[calc(100vh-160px)] overflow-y-auto scrollbar-thin scrollbar-thumb-amber-500 scrollbar-track-gray-100' : ''}`}>
+    <form onSubmit={handleSubmit} className={`${spacing} bg-white ${sectionPadding} rounded-xl shadow-lg ${compact ? 'max-h-[calc(100vh-200px)] overflow-y-auto overflow-x-hidden' : ''}`}>
       {/* Service Type Selection - Horizontal */}
       <div className={`bg-gray-50 ${compact ? 'p-2.5' : 'p-4'} rounded-lg`}>
         <label className={`block ${headingSize} font-bold text-gray-900 ${compact ? 'mb-1.5' : 'mb-2'}`}>
           Service Type *
         </label>
-        <div className={`grid ${compact ? 'grid-cols-5 gap-1' : 'grid-cols-3 sm:grid-cols-5 gap-2'}`}>
+        <div className={`grid ${compact ? 'grid-cols-5 gap-1' : 'grid-cols-3 sm:grid-cols-5 gap-2'} overflow-hidden`}>
           {bookingTypes.map((type) => (
             <label
               key={type.value}
-              className={`flex flex-col items-center justify-center ${compact ? 'p-1.5' : 'p-2'} rounded-lg border-2 cursor-pointer transition-all ${
+              className={`flex flex-col items-center justify-center ${compact ? 'p-1 sm:p-1.5' : 'p-2'} rounded-lg border-2 cursor-pointer transition-all min-w-0 ${
                 formData.bookingType === type.value
                   ? 'border-amber-600 bg-white shadow-sm'
                   : 'border-gray-200 hover:border-amber-300 bg-white'
