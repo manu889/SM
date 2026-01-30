@@ -15,7 +15,7 @@ export default function AboutSection() {
               Best Travel Agency in Mysore - Premium Taxi Services & Cab Booking
             </h2>
             <p className="text-sm text-gray-600 leading-relaxed mb-4">
-              SM Tours & Travels is the <strong>best travel agency in Mysore</strong> providing premium <strong>taxi services in Mysore</strong> since 2010. We offer the most reliable <strong>cab booking in Mysore</strong> with 50+ <strong>cabs in Mysore</strong> including Dzire, Innova, Crysta, and Tempo Traveller. Our <strong>cab services in Mysore</strong> include outstation tours, airport transfers, and local sightseeing at affordable rates starting ₹11/km.
+              SM Tours & Travels is the <strong>best travel agency in Mysore</strong> providing premium <strong>taxi services in Mysore</strong> since 2015. We offer the most reliable <strong>cab booking in Mysore</strong> with quality vehicles including Dzire, Innova, Crysta, and Tempo Traveller. Our <strong>cab services in Mysore</strong> include outstation tours, airport transfers, and local sightseeing at affordable rates starting ₹11/km.
             </p>
             <p className="text-sm text-gray-600 leading-relaxed mb-6">
               Verified drivers, 24/7 availability, instant <strong>cab booking</strong>. As the top-rated <strong>travel agency in Mysore</strong>, we serve <strong>Mysore to Ooty taxi</strong>, <strong>Mysore to Coorg cab</strong>, <strong>Mysore to Bangalore</strong>, and all popular routes. Book your <strong>cab in Mysore</strong> online with transparent pricing and no hidden charges.
@@ -87,7 +87,7 @@ export default function AboutSection() {
             {/* Floating Badge */}
             <div className="absolute -bottom-6 -right-6 bg-amber-600 text-white p-6 rounded-xl shadow-xl">
               <div className="text-center">
-                <div className="text-3xl font-bold">15+</div>
+                <div className="text-3xl font-bold">11+</div>
                 <div className="text-xs mt-1 opacity-90">Years of Excellence</div>
               </div>
             </div>

@@ -53,12 +53,12 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-5 text-base border-b border-slate-700 pb-2">Our Services</h4>
             <ul className="space-y-2.5 text-sm">
-              <li><Link href="/services/outstation-tours" className="text-gray-400 hover:text-amber-400 transition-colors hover:translate-x-1 inline-block">Outstation Tours</Link></li>
-              <li><Link href="/services/local-sightseeing" className="text-gray-400 hover:text-amber-400 transition-colors hover:translate-x-1 inline-block">Local Sightseeing</Link></li>
-              <li><Link href="/services/airport-transfers" className="text-gray-400 hover:text-amber-400 transition-colors hover:translate-x-1 inline-block">Airport Transfers</Link></li>
-              <li><Link href="/services/tempo-traveller" className="text-gray-400 hover:text-amber-400 transition-colors hover:translate-x-1 inline-block">Tempo Traveller</Link></li>
-              <li><Link href="/services/corporate-travel" className="text-gray-400 hover:text-amber-400 transition-colors hover:translate-x-1 inline-block">Corporate Travel</Link></li>
-              <li><Link href="/services/pilgrimage-tours" className="text-gray-400 hover:text-amber-400 transition-colors hover:translate-x-1 inline-block">Pilgrimage Tours</Link></li>
+              <li><Link href="/services/outstation-taxi-mysore" className="text-gray-400 hover:text-amber-400 transition-colors hover:translate-x-1 inline-block">Outstation Tours</Link></li>
+              <li><Link href="/services/local-sightseeing-taxi-mysore" className="text-gray-400 hover:text-amber-400 transition-colors hover:translate-x-1 inline-block">Local Sightseeing</Link></li>
+              <li><Link href="/services/airport-taxi-mysore" className="text-gray-400 hover:text-amber-400 transition-colors hover:translate-x-1 inline-block">Airport Transfers</Link></li>
+              <li><Link href="/services/tempo-traveller-mysore" className="text-gray-400 hover:text-amber-400 transition-colors hover:translate-x-1 inline-block">Tempo Traveller</Link></li>
+              <li><Link href="/services/corporate-taxi-mysore" className="text-gray-400 hover:text-amber-400 transition-colors hover:translate-x-1 inline-block">Corporate Travel</Link></li>
+              <li><Link href="/services/pilgrimage-taxi-mysore" className="text-gray-400 hover:text-amber-400 transition-colors hover:translate-x-1 inline-block">Pilgrimage Tours</Link></li>
             </ul>
           </div>
 

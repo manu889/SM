@@ -4,7 +4,7 @@ import { BUSINESS_INFO } from "@/data/constants";
 
 export const metadata: Metadata = {
   title: "Mysore Airport Taxi | Bangalore Airport Transfer | Kempegowda Airport Cab",
-  description: "Book Mysore to Bangalore airport taxi, Kempegowda Airport transfer from Mysore. 24/7 pickup & drop service. Clean AC cars, flight tracking, ₹2,000 fixed rate.",
+  description: "Book Mysore to Bangalore airport taxi, Kempegowda Airport transfer from Mysore. 24/7 pickup & drop service. Clean AC cars, flight tracking. Starting from ₹11/km.",
 };
 
 export default function AirportTransfersPage() {
@@ -46,19 +46,19 @@ export default function AirportTransfersPage() {
       from: "Mysore to Bangalore Airport",
       distance: "170 km",
       duration: "3-3.5 hours",
-      price: "₹2,500"
+      price: "Starting from ₹11/km (Sedan)"
     },
     {
       from: "Bangalore Airport to Mysore",
       distance: "170 km",
       duration: "3-3.5 hours",
-      price: "₹2,500"
+      price: "Starting from ₹11/km (Sedan)"
     },
     {
       from: "Mysore to Bangalore City via Airport",
       distance: "185 km",
       duration: "3.5-4 hours",
-      price: "₹2,800"
+      price: "Starting from ₹11/km (Sedan)"
     }
   ];
 

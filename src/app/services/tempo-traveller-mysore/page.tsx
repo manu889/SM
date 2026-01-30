@@ -48,31 +48,31 @@ export default function TempoTravellerPage() {
       destination: "Mysore to Ooty",
       distance: "125 km",
       duration: "3 hours",
-      price: "₹4,500"
+      price: "Starting from ₹18/km"
     },
     {
       destination: "Mysore to Coorg",
       distance: "120 km",
       duration: "2.5 hours",
-      price: "₹4,200"
+      price: "Starting from ₹18/km"
     },
     {
       destination: "Mysore to Bangalore",
       distance: "145 km",
       duration: "3 hours",
-      price: "₹3,600"
+      price: "Starting from ₹18/km"
     },
     {
       destination: "Mysore to Wayanad",
       distance: "140 km",
       duration: "3.5 hours",
-      price: "₹5,600"
+      price: "Starting from ₹18/km"
     }
   ];
 
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-br from-purple-50 via-pink-50 to-purple-100 py-20">
+      <section className="bg-linear-to-br from-purple-50 via-pink-50 to-purple-100 py-20">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-4xl mx-auto">
             <span className="inline-block px-4 py-1.5 bg-purple-600 text-white rounded-full text-xs font-semibold mb-4">
@@ -103,7 +103,7 @@ export default function TempoTravellerPage() {
               <h2 className="text-3xl font-bold text-slate-900 mb-6">Our Tempo Traveller Fleet</h2>
               <div className="space-y-6">
                 {vehicles.map((vehicle, index) => (
-                  <div key={index} className="border-2 border-purple-200 rounded-2xl p-6 hover:shadow-2xl transition-all bg-gradient-to-br from-white to-purple-50">
+                  <div key={index} className="border-2 border-purple-200 rounded-2xl p-6 hover:shadow-2xl transition-all bg-linear-to-br from-white to-purple-50">
                     <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
                       <div>
                         <h3 className="text-2xl font-bold text-slate-900">{vehicle.name}</h3>
@@ -207,7 +207,7 @@ export default function TempoTravellerPage() {
 
           <div className="lg:col-span-1">
             <div className="sticky top-24">
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl shadow-xl">
+              <div className="bg-linear-to-br from-purple-50 to-pink-50 p-6 rounded-2xl shadow-xl">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Book Tempo Traveller</h3>
                 <BookingForm compact />
               </div>

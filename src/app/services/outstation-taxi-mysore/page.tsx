@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 
 export default function OutstationToursPage() {
   const popularRoutes = [
-    { name: "Mysore to Ooty", distance: "125 km", duration: "3 hours", price: "₹2,500" },
-    { name: "Mysore to Coorg", distance: "120 km", duration: "2.5 hours", price: "₹2,200" },
-    { name: "Mysore to Bangalore", distance: "145 km", duration: "3 hours", price: "₹2,000" },
-    { name: "Mysore to Wayanad", distance: "140 km", duration: "3.5 hours", price: "₹3,200" },
-    { name: "Mysore to Chikmagalur", distance: "160 km", duration: "4 hours", price: "₹3,500" },
-    { name: "Mysore to Hassan", distance: "115 km", duration: "2.5 hours", price: "₹1,800" },
+    { name: "Mysore to Ooty", distance: "125 km", duration: "3 hours", price: "Starting from ₹11/km" },
+    { name: "Mysore to Coorg", distance: "120 km", duration: "2.5 hours", price: "Starting from ₹11/km" },
+    { name: "Mysore to Bangalore", distance: "145 km", duration: "3 hours", price: "Starting from ₹11/km" },
+    { name: "Mysore to Wayanad", distance: "140 km", duration: "3.5 hours", price: "Starting from ₹11/km" },
+    { name: "Mysore to Chikmagalur", distance: "160 km", duration: "4 hours", price: "Starting from ₹11/km" },
+    { name: "Mysore to Hassan", distance: "115 km", duration: "2.5 hours", price: "Starting from ₹11/km" },
   ];
 
   const features = [
@@ -158,7 +158,7 @@ export default function OutstationToursPage() {
               
               <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Why Book Outstation Cabs from Mysore with SM Tours?</h3>
               <ul className="space-y-2 text-slate-700">
-                <li><strong>15+ Years of Experience:</strong> Trusted by thousands of customers since 2010</li>
+                <li><strong>11+ Years of Experience:</strong> Trusted by thousands of customers since 2015</li>
                 <li><strong>Professional Drivers:</strong> Well-trained, courteous drivers with local knowledge</li>
                 <li><strong>Clean & Maintained Vehicles:</strong> Regular servicing and sanitization</li>
                 <li><strong>Transparent Pricing:</strong> No hidden charges, clear fare breakup</li>

@@ -58,12 +58,12 @@ export const NAV_LINKS = [
     label: 'Services', 
     href: '/services',
     dropdown: [
-      { label: 'Outstation Tours', href: '/services/outstation-tours' },
-      { label: 'Local Sightseeing', href: '/services/local-sightseeing' },
-      { label: 'Airport Transfers', href: '/services/airport-transfers' },
-      { label: 'Tempo Traveller', href: '/services/tempo-traveller' },
-      { label: 'Corporate Travel', href: '/services/corporate-travel' },
-      { label: 'Pilgrimage Tours', href: '/services/pilgrimage-tours' }
+      { label: 'Outstation Tours', href: '/services/outstation-taxi-mysore' },
+      { label: 'Local Sightseeing', href: '/services/local-sightseeing-taxi-mysore' },
+      { label: 'Airport Transfers', href: '/services/airport-taxi-mysore' },
+      { label: 'Tempo Traveller', href: '/services/tempo-traveller-mysore' },
+      { label: 'Corporate Travel', href: '/services/corporate-taxi-mysore' },
+      { label: 'Pilgrimage Tours', href: '/services/pilgrimage-taxi-mysore' }
     ]
   },
   { 

@@ -11,12 +11,12 @@ const NAV_LINKS = [
     label: 'Services', 
     href: '/services',
     dropdown: [
-      { label: 'Outstation Tours', href: '/services/outstation-tours' },
-      { label: 'Local Sightseeing', href: '/services/local-sightseeing' },
-      { label: 'Airport Transfers', href: '/services/airport-transfers' },
-      { label: 'Tempo Traveller', href: '/services/tempo-traveller' },
-      { label: 'Corporate Travel', href: '/services/corporate-travel' },
-      { label: 'Pilgrimage Tours', href: '/services/pilgrimage-tours' },
+      { label: 'Outstation Tours', href: '/services/outstation-taxi-mysore' },
+      { label: 'Local Sightseeing', href: '/services/local-sightseeing-taxi-mysore' },
+      { label: 'Airport Transfers', href: '/services/airport-taxi-mysore' },
+      { label: 'Tempo Traveller', href: '/services/tempo-traveller-mysore' },
+      { label: 'Corporate Travel', href: '/services/corporate-taxi-mysore' },
+      { label: 'Pilgrimage Tours', href: '/services/pilgrimage-taxi-mysore' },
     ]
   },
   { label: 'Tour Packages', href: '/packages' },
@@ -31,7 +31,6 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
-  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,11 +42,9 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isHomePage 
-          ? (isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4')
-          : (isScrolled ? 'bg-white shadow-md py-2' : 'bg-white/95 backdrop-blur-sm py-4 border-b border-gray-100')
-      }`}
+      className={`fixed z-50 transition-all duration-300 ${
+        isScrolled ? 'lg:top-0 top-0 bg-[#F7DB91] shadow-md py-2' : 'lg:top-10 top-0 bg-[#F7DB91]/95 backdrop-blur-sm py-4 border-b border-gray-100'
+      } left-0 right-0`}
     >
       <nav className="container mx-auto px-4 max-w-7xl">
         <div className="flex items-center justify-between">
@@ -79,7 +76,7 @@ export default function Header() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
-                    <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[220px] opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-300 ease-in-out z-50">
+                    <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-55 opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-300 ease-in-out z-50">
                       {link.dropdown.map((item) => (
                         <Link
                           key={item.href}
@@ -105,21 +102,8 @@ export default function Header() {
 
           {/* CTA Buttons - Desktop */}
           <div className="hidden lg:flex items-center gap-2 xl:gap-3">
-            <a
-              href={`tel:${BUSINESS_INFO.phone}`}
-              className="hidden xl:flex items-center gap-2 font-semibold transition-colors whitespace-nowrap text-amber-600 hover:text-amber-700 text-sm"
-            >
-              <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-              </svg>
-              <span>{BUSINESS_INFO.phone}</span>
-            </a>
-            <Link href="/book" className={`px-4 xl:px-6 py-2 xl:py-2.5 rounded-lg font-semibold transition-colors text-sm whitespace-nowrap ${
-              isHomePage && !isScrolled
-                ? 'bg-amber-600 text-white hover:bg-amber-700'
-                : 'bg-amber-600 hover:bg-amber-700 text-white'
-            }`}>
-              Book Now
+            <Link href="/book" className="px-4 xl:px-6 py-2 xl:py-2.5 rounded-lg font-semibold transition-colors text-sm whitespace-nowrap bg-amber-600 hover:bg-amber-700 text-white">
+              Book Taxi Now
             </Link>
           </div>
 

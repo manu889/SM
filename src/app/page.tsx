@@ -9,25 +9,28 @@ import FAQ from "@/components/FAQ";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SM Tours & Travels - Trusted Taxi Service in Mysore | ₹12/km",
+  title: "Best Taxi Service & Travel Agency in Mysore | ₹11/km Instant Booking | SM Tours & Travels",
   description:
-    "Book reliable taxi service in Mysore with SM Tours & Travels. Outstation trips to Ooty, Coorg, Bangalore from ₹12/km. Airport transfers, local sightseeing, Tempo Traveller. 24/7 service. Call +91 98765 43210",
+    "Book reliable taxi service in Mysore with SM Tours & Travels. Outstation trips to Ooty, Coorg, Bangalore from ₹11/km. Airport transfers, local sightseeing, corporate travel. 24/7 service. Call +91 6363206398",
   alternates: { canonical: "/" },
   keywords: [
     'mysore taxi service',
     'taxi in mysore',
+    'travels in mysore',
     'mysore to ooty cab',
     'mysore to coorg taxi',
     'bangalore to mysore cab',
     'airport taxi mysore',
-    'tempo traveller mysore',
     'mysore sightseeing cab',
     'outstation taxi mysore',
-    'mysore car rental'
+    'mysore car rental',
+    'best travels in mysore',
+    'travel agency mysore',
+    'cab booking mysore',
   ],
   openGraph: {
     title: 'SM Tours & Travels - Trusted Taxi Service in Mysore',
-    description: 'Professional taxi and cab rental service in Mysore. Outstation tours, airport transfers, local sightseeing from ₹12/km. Book now!',
+    description: 'Professional taxi and cab rental service in Mysore. Outstation tours, airport transfers, local sightseeing from ₹11/km. Book now!',
     type: 'website',
     url: '/',
   }

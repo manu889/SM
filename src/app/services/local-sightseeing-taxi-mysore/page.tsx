@@ -23,14 +23,16 @@ export default function LocalSightseeingPage() {
     {
       name: "Half Day Tour (4 Hours)",
       duration: "4 hours / 40 km",
-      price: "₹1,800",
+      price: "₹1,800 - ₹2,000",
+      vehicleType: "Sedan (Dzire/Etios)",
       includes: ["Mysore Palace", "Chamundi Hills", "St. Philomena's Church"]
     },
     {
       name: "Full Day Tour (8 Hours)",
       duration: "8 hours / 80 km",
-      price: "₹2,800",
-      includes: ["All half day attractions", "+ Brindavan Gardens", "+ Mysore Zoo", "+ Shopping"]
+      price: "₹3,000 - ₹3,500",
+      vehicleType: "Sedan or SUV (Innova/Ertiga)",
+      includes: ["All half day attractions", "+ Brindavan Gardens", "+ Mysore Zoo", "+ Karanji Lake", "+ Lunch break (optional)"]
     }
   ];
 
@@ -69,7 +71,8 @@ export default function LocalSightseeingPage() {
                 {packages.map((pkg, index) => (
                   <div key={index} className="border-2 border-amber-200 rounded-2xl p-6 hover:shadow-2xl transition-all bg-gradient-to-br from-white to-amber-50">
                     <h3 className="text-xl font-bold text-slate-900 mb-2">{pkg.name}</h3>
-                    <p className="text-sm text-slate-600 mb-4">{pkg.duration}</p>
+                    <p className="text-sm text-slate-600 mb-2">{pkg.duration}</p>
+                    <p className="text-xs text-slate-500 mb-4 bg-slate-100 px-2 py-1 rounded inline-block">{pkg.vehicleType}</p>
                     <p className="text-3xl font-bold text-amber-600 mb-4">{pkg.price}</p>
                     <ul className="space-y-2">
                       {pkg.includes.map((item, i) => (
@@ -107,10 +110,10 @@ export default function LocalSightseeingPage() {
               
               <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Why Choose Our Local Sightseeing Service?</h3>
               <ul className="space-y-2 text-slate-700">
+                <li>✓ <strong>Fixed Package Pricing:</strong> Half day ₹1,800-2,000 | Full day ₹3,000-3,500</li>
                 <li>✓ <strong>Experienced Local Drivers:</strong> Know the best routes and timings</li>
                 <li>✓ <strong>Flexible Itinerary:</strong> Customize as per your preferences</li>
                 <li>✓ <strong>Clean AC Vehicles:</strong> Comfortable sedans and SUVs</li>
-                <li>✓ <strong>Fixed Package Rates:</strong> No per-km charges, transparent pricing</li>
                 <li>✓ <strong>Multiple Pickup Points:</strong> Hotel, railway station, bus stand</li>
                 <li>✓ <strong>Photo Stops Allowed:</strong> Take your time at each location</li>
               </ul>

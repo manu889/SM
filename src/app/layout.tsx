@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Topbar from "@/components/Topbar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
@@ -48,7 +49,6 @@ export const metadata: Metadata = {
     "Mysore local taxi",
     "Mysore taxi fare",
     "taxi Mysore online booking",
-    "tempo traveller Mysore",
     "Mysore tour packages",
     "Mysore sightseeing taxi",
     "Mysore taxi number",
@@ -56,6 +56,7 @@ export const metadata: Metadata = {
     "tours and travels Mysore",
     "Innova Crysta Mysore",
     "Dzire taxi Mysore",
+    "Tempo Traveller Mysore",
   ],
   alternates: {
     canonical: "/",
@@ -88,7 +89,7 @@ export default function RootLayout({
     "@id": "https://smtoursandtravel.com/#organization",
     "name": BUSINESS_INFO.name,
     "alternateName": "SM Tours Mysore",
-    "description": "Leading taxi service in Mysore since 2010. Book online at ₹11/km for outstation tours, airport transfers, local sightseeing, tempo traveller. 24/7 service with clean AC cars and verified drivers.",
+    "description": "Leading taxi service in Mysore since 2015. Book online at ₹11/km for outstation tours, airport transfers, local sightseeing, corporate travel. 24/7 service with clean AC cars and professional drivers.",
     "url": "https://smtoursandtravel.com",
     "telephone": BUSINESS_INFO.phone,
     "email": BUSINESS_INFO.email,
@@ -237,6 +238,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+        <Topbar />
         <Header />
         {children}
         <Footer />

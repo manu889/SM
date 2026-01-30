@@ -33,7 +33,7 @@ export default async function TourPackagePage({ params }: { params: Promise<{ sl
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-emerald-50 via-teal-50 to-emerald-100 py-20">
         <div className="container mx-auto px-4 max-w-7xl">
-          <div className="max-w-4xl mx-auto">
+          <div className="w-full text-left">
             <span className="inline-block px-4 py-1.5 bg-emerald-600 text-white rounded-full text-xs font-semibold mb-4 uppercase">
               {tour.category.replace('-', ' ')} tour
             </span>

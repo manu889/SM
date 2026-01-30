@@ -2,15 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { tourPackages } from '@/data/tours';
 
-const tourImages: Record<string, string> = {
-  'mysore-one-day-tour': '/Images/Mysore_Tour_Package.jpg',
-  'ooty-coonoor-2-days': '/Images/2.jpg',
-  'coorg-2-days-tour': '/Images/Coorg_Tour_Package.jpg',
-  'tirupati-balaji-darshan': '/Images/3.jpg',
-  'mysore-ooty-coorg-5-days': '/Images/4.jpg',
-  'wayanad-2-days-tour': '/Images/5.jpg',
-};
-
 export default function PopularTours() {
   return (
     <section className="py-16 bg-white">
@@ -30,14 +21,14 @@ export default function PopularTours() {
               href={`/tours/${tour.slug}`}
               className="group block overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-slate-200 transition-all hover:shadow-2xl hover:ring-amber-300"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <div className="relative aspect-4/3 w-full overflow-hidden">
                 <Image
-                  src={tourImages[tour.slug] || '/Images/Mysore.jpg'}
+                  src={tour.image || '/Images/Mysore.jpg'}
                   alt={tour.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-slate-900/60 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3 flex gap-2">
                   <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-xs font-bold text-slate-900">
                     {tour.duration}
@@ -73,7 +64,7 @@ export default function PopularTours() {
           <p className="text-xs text-slate-500 mb-6">
             * Prices shown are starting rates per vehicle (not per person). Final pricing depends on vehicle type, passenger count, and additional services.
           </p>
-          <Link href="/packages" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-8 py-4 font-bold text-white shadow-lg shadow-amber-500/30 transition-all hover:shadow-xl hover:shadow-amber-500/40">
+          <Link href="/packages" className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-amber-500 to-orange-500 px-8 py-4 font-bold text-white shadow-lg shadow-amber-500/30 transition-all hover:shadow-xl hover:shadow-amber-500/40">
             <span>View All Packages</span>
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />

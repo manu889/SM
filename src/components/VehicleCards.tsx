@@ -30,15 +30,16 @@ export default function VehicleCards() {
           {vehicles.slice(0, 6).map((vehicle) => (
             <div 
               key={vehicle.id}
-              className="group relative overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-slate-900/5 transition-all hover:shadow-2xl hover:-translate-y-1"
+              className="group relative overflow-hidden rounded-2xl bg-[#F7DB91] shadow-lg ring-1 ring-slate-900/5 transition-all hover:shadow-2xl hover:-translate-y-1"
             >
               {/* Vehicle Image */}
-              <div className="relative aspect-video w-full overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
+              <div className="relative aspect-video w-full overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 border-4 border-white rounded-lg mx-4 mt-4 shadow-inner flex items-center justify-center">
                 <Image
                   src={vehicleImages[vehicle.id] || '/Images/Vehicles/Dzire.png'}
                   alt={vehicle.name}
-                  fill
-                  className="object-contain p-4"
+                  width={220}
+                  height={110}
+                  className="object-contain"
                 />
                 {/* Badge */}
                 <div className="absolute right-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-700 shadow-lg backdrop-blur-sm">

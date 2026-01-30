@@ -4,7 +4,7 @@ import { BUSINESS_INFO } from '@/data/constants';
 
 export default function PopularRoutes() {
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-20 bg-linear-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-14">
           <span className="inline-block px-4 py-1.5 bg-amber-100 text-amber-700 rounded-full text-xs font-semibold mb-3">
@@ -63,7 +63,7 @@ export default function PopularRoutes() {
           <p className="text-xs text-slate-500 mb-6">
             * Prices shown are starting rates per vehicle (not per person). Final pricing depends on vehicle type, passenger count, and additional services. Call +91 6363206398 for exact quote.
           </p>
-          <Link href="/routes/mysore-to-ooty" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-amber-700 px-8 py-4 text-white font-semibold hover:from-amber-700 hover:to-amber-800 transition-all shadow-lg hover:shadow-xl">
+          <Link href="/routes" className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-amber-600 to-amber-700 px-8 py-4 text-white font-semibold hover:from-amber-700 hover:to-amber-800 transition-all shadow-lg hover:shadow-xl">
             View All Routes
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

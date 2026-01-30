@@ -4,7 +4,7 @@ import { BUSINESS_INFO } from "@/data/constants";
 
 export const metadata: Metadata = {
   title: "About SM Tours & Travels - Best Travel Agency & Taxi Services in Mysore | Call +91 6363206398",
-  description: "Established in 2010, SM Tours & Travels is the best travel agency in Mysore. Premium taxi services, 50+ cabs in Mysore, instant cab booking. 4.9★ rated. 24/7 cab services for outstation tours, airport transfers.",
+  description: "Established in 2015, SM Tours & Travels is the best travel agency in Mysore. Premium taxi services, instant cab booking. 4.9★ rated. 24/7 cab services for outstation tours, airport transfers.",
 };
 
 export default function AboutPage() {
@@ -42,8 +42,8 @@ export default function AboutPage() {
                 </p>
                 <p>
                   Over the years, we have built our reputation on three pillars: safety, reliability, and customer satisfaction. 
-                  Our fleet has expanded to over 120 well-maintained vehicles, and our team now includes more than 75 professional 
-                  drivers who are trained to handle all types of routes and situations.
+                  Our commitment to quality service and transparent pricing has helped us grow into one of the most trusted 
+                  taxi services in the region.
                 </p>
                 <p>
                   Today, we serve thousands of satisfied customers annually, from local sightseeing tours to outstation trips 
@@ -72,26 +72,22 @@ export default function AboutPage() {
               </div>
             </section>
 
-            {/* Our Fleet */}
+            {/* Our Service Excellence */}
             <section className="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-slate-900/5">
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Our Fleet</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Our Service Excellence</h2>
               <div className="space-y-4 text-sm text-slate-600">
                 <p>
-                  We maintain a diverse fleet of over 120 vehicles to cater to all your travel needs. From compact sedans 
+                  We maintain a diverse fleet of well-maintained vehicles to cater to all your travel needs. From compact sedans 
                   for couples to spacious Tempo Travellers for large groups, we have the perfect vehicle for every occasion.
                 </p>
-                <div className="grid md:grid-cols-3 gap-4 mt-6">
-                  <div className="text-center p-4 bg-slate-50 rounded-lg">
-                    <div className="text-2xl font-bold text-amber-600 mb-1">120+</div>
-                    <div className="text-sm text-slate-600">Total Vehicles</div>
-                  </div>
-                  <div className="text-center p-4 bg-slate-50 rounded-lg">
-                    <div className="text-2xl font-bold text-amber-600 mb-1">75+</div>
-                    <div className="text-sm text-slate-600">Professional Drivers</div>
-                  </div>
+                <div className="grid md:grid-cols-2 gap-4 mt-6">
                   <div className="text-center p-4 bg-slate-50 rounded-lg">
                     <div className="text-2xl font-bold text-amber-600 mb-1">15,000+</div>
                     <div className="text-sm text-slate-600">Happy Customers</div>
+                  </div>
+                  <div className="text-center p-4 bg-slate-50 rounded-lg">
+                    <div className="text-2xl font-bold text-amber-600 mb-1">{BUSINESS_INFO.googleRatings.rating}★</div>
+                    <div className="text-sm text-slate-600">Google Rating</div>
                   </div>
                 </div>
               </div>

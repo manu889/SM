@@ -14,7 +14,7 @@ export default function PilgrimageToursPage() {
       location: "Andhra Pradesh",
       distance: "550 km from Mysore",
       duration: "2 Days / 1 Night",
-      price: "₹12,000",
+      price: "Starting from ₹11/km (Sedan)",
       highlights: ["Balaji Darshan", "Padmavathi Temple", "Golden Temple"]
     },
     {
@@ -22,7 +22,7 @@ export default function PilgrimageToursPage() {
       location: "Maharashtra",
       distance: "900 km from Mysore",
       duration: "3 Days / 2 Nights",
-      price: "₹22,000",
+      price: "Starting from ₹11/km (Sedan)",
       highlights: ["Sai Baba Temple", "Shani Shingnapur", "Accommodation"]
     },
     {
@@ -30,7 +30,7 @@ export default function PilgrimageToursPage() {
       location: "Karnataka",
       distance: "150 km from Mysore",
       duration: "1 Day",
-      price: "₹3,500",
+      price: "Starting from ₹11/km (Sedan)",
       highlights: ["Manjunatha Temple", "Bahubali Statue", "One day tour"]
     },
     {
@@ -38,7 +38,7 @@ export default function PilgrimageToursPage() {
       location: "Karnataka",
       distance: "160 km from Mysore",
       duration: "1 Day",
-      price: "₹3,800",
+      price: "Starting from ₹11/km (Sedan)",
       highlights: ["Subramanya Temple", "Sarpa Samskara", "Return same day"]
     }
   ];
@@ -166,18 +166,18 @@ export default function PilgrimageToursPage() {
                 <li>✓ <strong>Day 1 Evening:</strong> Visit Padmavathi Temple, Golden Temple, local sightseeing</li>
                 <li>✓ <strong>Day 2 Morning:</strong> Tirumala Balaji Darshan (we help with booking or waiting)</li>
                 <li>✓ <strong>Day 2 Afternoon:</strong> Return journey to Mysore, reach by evening</li>
-                <li>✓ <strong>Package Rate:</strong> ₹12,000 (sedan), ₹15,000 (SUV) - includes all tolls, parking, driver allowance</li>
+                <li>✓ <strong>Package Rate:</strong> Starting from ₹11/km for sedan, ₹13/km for SUV (includes tolls, parking, driver allowance)</li>
               </ul>
 
               <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Other Popular Temple Tours</h3>
               <div className="space-y-4 text-slate-700">
                 <div>
                   <p className="font-bold">Shirdi Sai Baba Yatra (3 Days / 2 Nights)</p>
-                  <p>Visit Shirdi Sai Baba Temple, Shani Shingnapur. Stay in Shirdi. ₹22,000 sedan, ₹28,000 SUV.</p>
+                  <p>Visit Shirdi Sai Baba Temple, Shani Shingnapur. Stay in Shirdi. Starting from ₹11/km sedan, ₹13/km SUV.</p>
                 </div>
                 <div>
                   <p className="font-bold">Dharmasthala One Day Tour</p>
-                  <p>Visit Manjunatha Temple, Bahubali Statue. Return same day. ₹3,500 sedan, ₹4,500 SUV.</p>
+                  <p>Visit Manjunatha Temple, Bahubali Statue. Return same day. Starting from ₹11/km sedan, ₹13/km SUV.</p>
                 </div>
                 <div>
                   <p className="font-bold">Kukke Subramanya Darshan</p>
@@ -187,7 +187,7 @@ export default function PilgrimageToursPage() {
 
               <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Why Book With Us?</h3>
               <ul className="space-y-2 text-slate-700">
-                <li>✓ 15+ years experience in pilgrimage tours</li>
+                <li>✓ 11+ years experience in pilgrimage tours</li>
                 <li>✓ Drivers familiar with temple routes and timings</li>
                 <li>✓ Help with darshan tickets and accommodation</li>
                 <li>✓ Flexible departure times (early morning available)</li>

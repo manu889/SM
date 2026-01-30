@@ -111,25 +111,25 @@ export default function CorporateTravelPage() {
                       <td className="border border-slate-300 px-4 py-3">Dzire / Etios (Sedan)</td>
                       <td className="border border-slate-300 px-4 py-3">4 passengers</td>
                       <td className="border border-slate-300 px-4 py-3 font-bold text-slate-700">₹13/km</td>
-                      <td className="border border-slate-300 px-4 py-3">₹2,200</td>
+                      <td className="border border-slate-300 px-4 py-3">Starting from ₹2,200</td>
                     </tr>
                     <tr className="bg-slate-50">
                       <td className="border border-slate-300 px-4 py-3">Ertiga (MUV)</td>
                       <td className="border border-slate-300 px-4 py-3">6 passengers</td>
                       <td className="border border-slate-300 px-4 py-3 font-bold text-slate-700">₹15/km</td>
-                      <td className="border border-slate-300 px-4 py-3">₹2,500</td>
+                      <td className="border border-slate-300 px-4 py-3">Starting from ₹2,500</td>
                     </tr>
                     <tr>
                       <td className="border border-slate-300 px-4 py-3">Innova (SUV)</td>
                       <td className="border border-slate-300 px-4 py-3">7 passengers</td>
                       <td className="border border-slate-300 px-4 py-3 font-bold text-slate-700">₹17/km</td>
-                      <td className="border border-slate-300 px-4 py-3">₹2,800</td>
+                      <td className="border border-slate-300 px-4 py-3">Starting from ₹2,800</td>
                     </tr>
                     <tr className="bg-slate-50">
                       <td className="border border-slate-300 px-4 py-3">Innova Crysta (Premium)</td>
                       <td className="border border-slate-300 px-4 py-3">7 passengers</td>
                       <td className="border border-slate-300 px-4 py-3 font-bold text-slate-700">₹20/km</td>
-                      <td className="border border-slate-300 px-4 py-3">₹3,200</td>
+                      <td className="border border-slate-300 px-4 py-3">Starting from ₹3,200</td>
                     </tr>
                   </tbody>
                 </table>
