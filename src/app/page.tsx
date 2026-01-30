@@ -1,12 +1,25 @@
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
 import ServiceCards from "@/components/ServiceCards";
-import VehicleCards from "@/components/VehicleCards";
-import PopularRoutes from "@/components/PopularRoutes";
-import PopularTours from "@/components/PopularTours";
-import Testimonials from "@/components/Testimonials";
-import FAQ from "@/components/FAQ";
+import dynamic from "next/dynamic";
 import type { Metadata } from "next";
+
+// Lazy load below-fold components
+const VehicleCards = dynamic(() => import("@/components/VehicleCards"), {
+  loading: () => <div className="min-h-100 animate-pulse bg-gray-100" />,
+});
+const PopularRoutes = dynamic(() => import("@/components/PopularRoutes"), {
+  loading: () => <div className="min-h-100 animate-pulse bg-gray-100" />,
+});
+const PopularTours = dynamic(() => import("@/components/PopularTours"), {
+  loading: () => <div className="min-h-100 animate-pulse bg-gray-100" />,
+});
+const Testimonials = dynamic(() => import("@/components/Testimonials"), {
+  loading: () => <div className="min-h-75 animate-pulse bg-gray-100" />,
+});
+const FAQ = dynamic(() => import("@/components/FAQ"), {
+  loading: () => <div className="min-h-75 animate-pulse bg-gray-100" />,
+});
 
 export const metadata: Metadata = {
   title: "Best Taxi Service & Travel Agency in Mysore | ₹11/km Instant Booking | SM Tours & Travels",
