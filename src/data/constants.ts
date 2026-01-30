@@ -3,7 +3,7 @@ export const BUSINESS_INFO = {
   tagline: 'Your Trusted Travel Partner in Mysore',
   phone: '+91 6363206398',
   whatsapp: '+91 6363206398',
-  email: 'support@smtoursandtravel.com',
+  email: 'smenterprises585@gmail.com',
   alternateEmail: 'smtoursandtravelmy@gmail.com',
   address: '2ND FLOOR, 541/1 CH10, WESTCROSS ROAD, Sunnadakeri, KUMBARGERI (BESTAGERI), Rahmania Mohalla, Mysuru, Karnataka 570004',
   addressDetails: {

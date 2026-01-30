@@ -14,7 +14,12 @@ export type TourCardData = {
   duration: string;
   days: number;
   nights: number;
-  price: number;
+  pricing: {
+    sedan?: number;
+    suv?: number;
+    tempo?: number;
+    note?: string;
+  };
   destinations: string[];
   description: string;
   category: TourCategory;
@@ -122,8 +127,20 @@ export default function PackagesBrowser({ tours }: { tours: TourCardData[] }) {
       return hay.includes(q);
     });
 
-    if (sort === 'price-asc') return [...base].sort((a, b) => a.price - b.price);
-    if (sort === 'price-desc') return [...base].sort((a, b) => b.price - a.price);
+    if (sort === 'price-asc') {
+      return [...base].sort((a, b) => {
+        const priceA = a.pricing.sedan || a.pricing.suv || a.pricing.tempo || 0;
+        const priceB = b.pricing.sedan || b.pricing.suv || b.pricing.tempo || 0;
+        return priceA - priceB;
+      });
+    }
+    if (sort === 'price-desc') {
+      return [...base].sort((a, b) => {
+        const priceA = a.pricing.sedan || a.pricing.suv || a.pricing.tempo || 0;
+        const priceB = b.pricing.sedan || b.pricing.suv || b.pricing.tempo || 0;
+        return priceB - priceA;
+      });
+    }
     return base;
   }, [tours, search, category, destination, days, sort]);
 
@@ -288,7 +305,9 @@ export default function PackagesBrowser({ tours }: { tours: TourCardData[] }) {
                         <div className="flex items-center justify-between">
                           <div>
                             <span className="text-xs text-slate-500 block">Starting from</span>
-                            <span className="text-base font-bold text-amber-600">₹{tour.price.toLocaleString()}*</span>
+                            <span className="text-base font-bold text-amber-600">
+                              ₹{(tour.pricing.sedan || tour.pricing.suv || tour.pricing.tempo || 0).toLocaleString()}*
+                            </span>
                           </div>
                           <span className="text-sm font-semibold text-amber-600 flex items-center gap-1">
                             View Details

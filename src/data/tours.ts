@@ -5,7 +5,12 @@ export interface TourPackage {
   duration: string;
   days: number;
   nights: number;
-  price: number;
+  pricing: {
+    sedan?: number;
+    suv?: number;
+    tempo?: number;
+    note?: string;
+  };
   destinations: string[];
   description: string;
   highlights: string[];
@@ -29,7 +34,12 @@ export const tourPackages: TourPackage[] = [
     duration: '1 Day',
     days: 1,
     nights: 0,
-    price: 3500,
+    pricing: {
+      sedan: 2500,
+      suv: 3000,
+      tempo: 4500,
+      note: 'Fixed package pricing for full-day tour'
+    },
     image: '/Images/Mysore_Tour_Package.jpg',
     destinations: ['Mysore Palace', 'Chamundi Hills', 'St. Philomena\'s Church', 'Brindavan Gardens'],
     description: 'Explore the royal heritage of Mysore in a comprehensive one-day sightseeing tour covering Mysore Palace, Chamundi Hills, St. Philomena\'s Church, and the Musical Fountains at Brindavan Gardens.',
@@ -81,7 +91,12 @@ export const tourPackages: TourPackage[] = [
     duration: '2 Days / 1 Night',
     days: 2,
     nights: 1,
-    price: 9500,
+    pricing: {
+      sedan: 8500,
+      suv: 10500,
+      tempo: 14000,
+      note: 'Approx. 500 km round trip'
+    },
     image: '/Images/2.jpg',
     destinations: ['Ooty', 'Coonoor', 'Botanical Gardens', 'Doddabetta Peak', 'Tea Gardens'],
     description: 'Experience the beauty of Nilgiri Hills with this 2-day tour covering Ooty and Coonoor. Visit tea estates, botanical gardens, scenic viewpoints, and enjoy the cool mountain climate.',
@@ -148,7 +163,12 @@ export const tourPackages: TourPackage[] = [
     duration: '2 Days / 1 Night',
     days: 2,
     nights: 1,
-    price: 8500,
+    pricing: {
+      sedan: 7500,
+      suv: 9500,
+      tempo: 13000,
+      note: 'Approx. 450 km round trip'
+    },
     image: '/Images/Coorg_Tour_Package.jpg',
     destinations: ['Coorg', 'Abbey Falls', 'Raja\'s Seat', 'Talacauvery', 'Dubare Elephant Camp'],
     description: 'Discover the Scotland of India with our 2-day Coorg tour. Experience coffee plantations, waterfalls, wildlife, and breathtaking hill views.',
@@ -212,7 +232,12 @@ export const tourPackages: TourPackage[] = [
     duration: '2 Days / 1 Night',
     days: 2,
     nights: 1,
-    price: 14000,
+    pricing: {
+      sedan: 14000,
+      suv: 17000,
+      tempo: 22000,
+      note: 'Approx. 800 km round trip'
+    },
     image: '/Images/3.jpg',
     destinations: ['Tirupati', 'Tirumala', 'Padmavathi Temple', 'Sri Kalahasti'],
     description: 'Seek blessings at Tirupati Balaji with our comfortable pilgrimage package from Mysore. We handle travel, darshan arrangements, and ensure a hassle-free spiritual journey.',
@@ -273,7 +298,12 @@ export const tourPackages: TourPackage[] = [
     duration: '5 Days / 4 Nights',
     days: 5,
     nights: 4,
-    price: 22000,
+    pricing: {
+      sedan: 22000,
+      suv: 27000,
+      tempo: 35000,
+      note: 'Approx. 1000 km total journey'
+    },
     image: '/Images/4.jpg',
     destinations: ['Mysore', 'Ooty', 'Coonoor', 'Coorg', 'Nagarhole'],
     description: 'Comprehensive 5-day tour covering Mysore, Ooty, Coonoor, and Coorg. Perfect for families and groups looking for a complete South Indian hill station experience.',
@@ -372,7 +402,12 @@ export const tourPackages: TourPackage[] = [
     duration: '2 Days / 1 Night',
     days: 2,
     nights: 1,
-    price: 10500,
+    pricing: {
+      sedan: 10000,
+      suv: 12500,
+      tempo: 16000,
+      note: 'Approx. 600 km round trip'
+    },
     image: '/Images/5.jpg',
     destinations: ['Wayanad', 'Edakkal Caves', 'Soochipara Falls', 'Pookode Lake', 'Banasura Dam'],
     description: 'Explore the natural beauty of Wayanad, Kerala, with this 2-day tour from Mysore. Visit caves, waterfalls, lakes, and enjoy the lush greenery of the Western Ghats.',

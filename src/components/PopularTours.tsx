@@ -46,7 +46,9 @@ export default function PopularTours() {
                 <div className="flex items-center justify-between">
                   <div>
                     <span className="text-xs text-slate-500 block">Starting from</span>
-                    <span className="text-base font-bold text-amber-600">₹{tour.price.toLocaleString()}*</span>
+                    <span className="text-base font-bold text-amber-600">
+                      ₹{(tour.pricing.sedan || tour.pricing.suv || tour.pricing.tempo || 0).toLocaleString()}*
+                    </span>
                   </div>
                   <div className="flex items-center gap-1 text-amber-600 font-semibold text-sm">
                     <span>Explore</span>
