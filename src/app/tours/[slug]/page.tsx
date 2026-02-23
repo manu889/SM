@@ -1,8 +1,15 @@
 import { notFound } from "next/navigation";
 import { tourPackages } from "@/data/tours";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import TourEnquiryForm from "@/components/TourEnquiryForm";
+import TourPackageHero from "@/components/TourPackageHero";
+import RelatedTourPackages from "@/components/RelatedTourPackages";
 import { BUSINESS_INFO } from "@/data/constants";
+
+const HappyCustomers = dynamic(() => import("@/components/HappyCustomers"), {
+  loading: () => <div className="min-h-75 animate-pulse bg-gray-100" />,
+});
 
 export async function generateStaticParams() {
   return tourPackages.map((tour) => ({
@@ -33,70 +40,41 @@ export default async function TourPackagePage({ params }: { params: Promise<{ sl
 
   return (
     <main className="min-h-screen bg-white">
-      <section className="bg-linear-to-br from-emerald-50 via-teal-50 to-emerald-100 py-20">
+      <TourPackageHero tour={tour} />
+
+      {/* Pricing Section */}
+      <section className="bg-gradient-to-b from-amber-50 to-white py-16">
         <div className="container mx-auto px-4 max-w-7xl">
-          <div className="w-full text-left">
-            <span className="inline-block px-4 py-1.5 bg-emerald-600 text-white rounded-full text-xs font-semibold mb-4 uppercase">
-              {tour.category.replace('-', ' ')} tour
-            </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              {tour.title}
-            </h1>
-            <p className="text-lg text-slate-700 mb-6">
-              {tour.description}
-            </p>
-            
-            {/* Pricing Cards */}
-            <div className="mb-8">
-              <h3 className="text-xl font-bold text-slate-900 mb-4">Vehicle Options & Pricing</h3>
-              <div className="grid md:grid-cols-3 gap-4">
-                {tour.pricing.sedan && (
-                  <div className="bg-white border-2 border-emerald-200 rounded-xl p-4 shadow-md">
-                    <div className="text-lg font-bold text-slate-900 mb-1">Sedan</div>
-                    <div className="text-sm text-slate-600 mb-2">Dzire / Etios</div>
-                    <div className="text-3xl font-bold text-emerald-600">₹{tour.pricing.sedan.toLocaleString()}</div>
-                  </div>
-                )}
-                {tour.pricing.suv && (
-                  <div className="bg-white border-2 border-emerald-200 rounded-xl p-4 shadow-md">
-                    <div className="text-lg font-bold text-slate-900 mb-1">SUV</div>
-                    <div className="text-sm text-slate-600 mb-2">Innova / Ertiga</div>
-                    <div className="text-3xl font-bold text-emerald-600">₹{tour.pricing.suv.toLocaleString()}</div>
-                  </div>
-                )}
-                {tour.pricing.tempo && (
-                  <div className="bg-white border-2 border-emerald-200 rounded-xl p-4 shadow-md">
-                    <div className="text-lg font-bold text-slate-900 mb-1">Tempo Traveller</div>
-                    <div className="text-sm text-slate-600 mb-2">12-17 Seater</div>
-                    <div className="text-3xl font-bold text-emerald-600">₹{tour.pricing.tempo.toLocaleString()}</div>
-                  </div>
-                )}
+          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Vehicle Options & Pricing</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {tour.pricing.sedan && (
+              <div className="bg-white border-2 border-amber-200 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                <div className="text-lg font-bold text-slate-900 mb-1">Sedan</div>
+                <div className="text-sm text-slate-600 mb-4">Dzire / Etios</div>
+                <div className="text-xs text-slate-500 mb-2">Starts from</div>
+                <div className="text-4xl font-bold text-amber-600 mb-4">₹{tour.pricing.sedan.toLocaleString()}</div>
               </div>
-              {tour.pricing.note && (
-                <p className="text-sm text-slate-600 mt-3 italic">* {tour.pricing.note}</p>
-              )}
-            </div>
-            
-            <div className="flex flex-wrap gap-6 text-slate-800 mb-8">
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">📅</span>
-                <span className="font-semibold">{tour.duration}</span>
+            )}
+            {tour.pricing.suv && (
+              <div className="bg-white border-2 border-amber-200 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                <div className="text-lg font-bold text-slate-900 mb-1">SUV</div>
+                <div className="text-sm text-slate-600 mb-4">Innova / Ertiga</div>
+                <div className="text-xs text-slate-500 mb-2">Starts from</div>
+                <div className="text-4xl font-bold text-amber-600 mb-4">₹{tour.pricing.suv.toLocaleString()}</div>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">📍</span>
-                <span className="font-semibold">{tour.destinations.length} Destinations</span>
+            )}
+            {tour.pricing.tempo && (
+              <div className="bg-white border-2 border-amber-200 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                <div className="text-lg font-bold text-slate-900 mb-1">Tempo Traveller</div>
+                <div className="text-sm text-slate-600 mb-4">12-17 Seater</div>
+                <div className="text-xs text-slate-500 mb-2">Starts from</div>
+                <div className="text-4xl font-bold text-amber-600 mb-4">₹{tour.pricing.tempo.toLocaleString()}</div>
               </div>
-            </div>
-            
-            <div className="flex flex-wrap gap-4">
-              <a href={`tel:${BUSINESS_INFO.phone}`} className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-bold transition-all shadow-lg">
-                📞 Call {BUSINESS_INFO.phone}
-              </a>
-              <a href={`https://wa.me/${BUSINESS_INFO.whatsapp.replace(/\D/g, '')}?text=Hi, I'm interested in ${tour.title}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-bold transition-all shadow-lg">
-                💬 WhatsApp Booking
-              </a>
-            </div>
+            )}
           </div>
+          {tour.pricing.note && (
+            <p className="text-sm text-slate-600 mt-6 text-center italic">* {tour.pricing.note}</p>
+          )}
         </div>
       </section>
 
@@ -240,6 +218,11 @@ export default async function TourPackagePage({ params }: { params: Promise<{ sl
           </div>
         </div>
       </div>
+      {/* Happy Customers Section */}
+      <HappyCustomers />
+
+      {/* Related Tour Packages */}
+      <RelatedTourPackages currentTourSlug={tour.slug} />
     </main>
   );
 }
