@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import BookingForm from "@/components/BookingForm";
 import { BUSINESS_INFO } from "@/data/constants";
+
+const HappyCustomers = dynamic(() => import("@/components/HappyCustomers"), {
+  loading: () => <div className="min-h-75 animate-pulse bg-gray-100" />,
+});
 
 export const metadata: Metadata = {
   title: "About SM Tours & Travels - Best Travel Agency & Taxi Services in Mysore | Call +91 6363206398",
@@ -71,6 +76,9 @@ export default function AboutPage() {
                 ))}
               </div>
             </section>
+
+            {/* Happy Customers */}
+            <HappyCustomers />
 
             {/* Our Service Excellence */}
             <section className="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-slate-900/5">

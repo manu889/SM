@@ -1,6 +1,7 @@
 import BookingForm from '@/components/BookingForm';
 import { BUSINESS_INFO } from '@/data/constants';
 import Image from 'next/image';
+import HeroCarousel from '@/components/HeroCarousel';
 
 const PHONE = BUSINESS_INFO.phone;
 const WHATSAPP = `https://wa.me/${BUSINESS_INFO.whatsapp.replace(/[^0-9]/g, '')}`;
@@ -8,18 +9,8 @@ const WHATSAPP = `https://wa.me/${BUSINESS_INFO.whatsapp.replace(/[^0-9]/g, '')}
 export default function Hero() {
   return (
     <section className="relative min-h-screen bg-black pt-16 lg:pt-24 overflow-hidden">
-      {/* Background Pattern with Dark Overlay */}
-      <div className="absolute inset-0" aria-hidden="true">
-        <Image
-          src="/Images/Mysore.jpg"
-          alt=""
-          fill
-          priority
-          quality={75}
-          className="object-cover opacity-40"
-          sizes="100vw"
-        />
-      </div>
+      {/* Background Carousel */}
+      <HeroCarousel />
       <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
 
       <div className="relative container mx-auto px-3 sm:px-4 py-6 sm:py-10 lg:py-16 max-w-7xl">

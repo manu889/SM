@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Our Fleet - Dzire, Innova, Crysta, Tempo Traveller | Mysore Taxi Service",
-  description: "Choose from 50+ well-maintained AC vehicles: Swift Dzire (₹11/km), Ertiga (₹13/km), Innova (₹15/km), Innova Crysta (₹18/km), Tempo Traveller (₹25/km). Clean cars, professional drivers. Book Mysore taxi now.",
+  description: "Choose from our well-maintained AC vehicles: Swift Dzire (₹11/km), Ertiga (₹13/km), Innova (₹15/km), Innova Crysta (₹18/km), Tempo Traveller (₹25/km). Clean cars, professional drivers. Book Mysore taxi now.",
 };
 
 const vehicleImages: Record<string, string> = {
@@ -37,7 +37,7 @@ export default function VehiclesPage() {
               Well-Maintained Vehicles
             </h1>
             <p className="text-base text-slate-600 max-w-3xl mx-auto">
-              Choose from our diverse fleet of 120+ vehicles - from compact sedans to spacious tempo travellers
+              Choose from our diverse fleet of vehicles - from compact sedans to spacious tempo travellers
             </p>
           </div>
         </div>

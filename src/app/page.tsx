@@ -8,6 +8,9 @@ import type { Metadata } from "next";
 const VehicleCards = dynamic(() => import("@/components/VehicleCards"), {
   loading: () => <div className="min-h-100 animate-pulse bg-gray-100" />,
 });
+const HappyCustomers = dynamic(() => import("@/components/HappyCustomers"), {
+  loading: () => <div className="min-h-75 animate-pulse bg-gray-100" />,
+});
 const PopularRoutes = dynamic(() => import("@/components/PopularRoutes"), {
   loading: () => <div className="min-h-100 animate-pulse bg-gray-100" />,
 });
@@ -54,8 +57,9 @@ export default function Home() {
     <main>
       <Hero />
       <AboutSection />
-      <ServiceCards />
       <VehicleCards />
+      <HappyCustomers />
+      <ServiceCards />
       <PopularRoutes />
       <PopularTours />
       <Testimonials />

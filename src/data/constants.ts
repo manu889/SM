@@ -44,8 +44,8 @@ export const BUSINESS_INFO = {
 
   features: [
     '10+ Years of Excellence',
-    '75+ Professional Drivers',
-    '120+ Well-Maintained Vehicles',
+    'Professional Drivers',
+    'Well-Maintained Vehicles',
     '24/7 Customer Support',
     '15,000+ Satisfied Customers',
     'GPS-Enabled Fleet'
