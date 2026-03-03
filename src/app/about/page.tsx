@@ -8,7 +8,7 @@ const HappyCustomers = dynamic(() => import("@/components/HappyCustomers"), {
 });
 
 export const metadata: Metadata = {
-  title: "About SM Tours & Travels - Best Travel Agency & Taxi Services in Mysore | Call +91 6363206398",
+  title: "SM Tours & Travels - Travel Agency Mysore| Taxi, Cab Services in Mysore | Call +91 6363206398",
   description: "Established in 2015, SM Tours & Travels is the best travel agency in Mysore. Premium taxi services, instant cab booking. 4.9★ rated. 24/7 cab services for outstation tours, airport transfers.",
 };
 
