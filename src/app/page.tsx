@@ -25,7 +25,7 @@ const FAQ = dynamic(() => import("@/components/FAQ"), {
 });
 
 export const metadata: Metadata = {
-  title: "Taxi, Cabs in Mysore & Travel Agency in Mysore | ₹11/km Instant Booking | SM Tours & Travels",
+  title: "Taxi, Cabs in Mysore | Travel Agency in Mysore | ₹11/km Instant Booking | SM Tours & Travels",
   description:
     "Book reliable taxi service in Mysore with SM Tours & Travels. Outstation trips to Ooty, Coorg, Bangalore from ₹11/km. Airport transfers, local sightseeing, corporate travel. 24/7 service. Call +91 6363206398",
   alternates: { canonical: "/" },
@@ -33,7 +33,9 @@ export const metadata: Metadata = {
     'mysore taxi service',
     'taxi in mysore',
     'travels in mysore',
+    'travels in mysore',
     'mysore to ooty cab',
+    'travel agency in mysore',
     'mysore to coorg taxi',
     'bangalore to mysore cab',
     'airport taxi mysore',
