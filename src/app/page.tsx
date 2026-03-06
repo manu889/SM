@@ -25,9 +25,9 @@ const FAQ = dynamic(() => import("@/components/FAQ"), {
 });
 
 export const metadata: Metadata = {
-  title: "Taxi, Cabs in Mysore | Travel Agency in Mysore | ₹11/km Instant Booking | SM Tours & Travels",
+  title: " Travel Agency in Mysore | Taxi, Cabs in Mysore  | ₹11/km  Call-6363206398 | SM Tours & Travels",
   description:
-    "Book reliable taxi service in Mysore with SM Tours & Travels. Outstation trips to Ooty, Coorg, Bangalore from ₹11/km. Airport transfers, local sightseeing, corporate travel. 24/7 service. Call +91 6363206398",
+    "Book most affordable taxi service in Mysore with SM Tours & Travels. Outstation trips to Ooty, Coorg, Bangalore from ₹11/km. Airport transfers, local sightseeing, corporate travel. 24/7 service. Call +91 6363206398",
   alternates: { canonical: "/" },
   keywords: [
     'mysore taxi service',
