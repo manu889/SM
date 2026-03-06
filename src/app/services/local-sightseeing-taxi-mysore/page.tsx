@@ -5,6 +5,20 @@ import { BUSINESS_INFO } from "@/data/constants";
 export const metadata: Metadata = {
   title: "Mysore Local Sightseeing Taxi | Full Day & Half Day City Tour | ₹1,800",
   description: "Book Mysore local sightseeing taxi for full day (8 hours) or half day (4 hours) city tour. Visit Mysore Palace, Chamundi Hills, Brindavan Gardens. Clean AC cars, experienced drivers. Starting at ₹1,800.",
+  alternates: { canonical: "/services/local-sightseeing-taxi-mysore" },
+  openGraph: {
+    title: "Mysore Local Sightseeing Taxi | City Tour Packages",
+    description: "Book Mysore local sightseeing taxi. Visit Mysore Palace, Chamundi Hills, Brindavan Gardens. Full day & half day packages. Starting at ₹1,800.",
+    type: "website",
+    url: "https://smtoursandtravel.com/services/local-sightseeing-taxi-mysore",
+    images: [{ url: "https://smtoursandtravel.com/logo.png", width: 800, height: 600, alt: "Mysore Sightseeing Taxi - SM Tours" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mysore Local Sightseeing Taxi | City Tour Packages",
+    description: "Book Mysore local sightseeing taxi for full day and half day city tours. Starting at ₹1,800.",
+    images: ["https://smtoursandtravel.com/logo.png"],
+  },
 };
 
 export default function LocalSightseeingPage() {
@@ -135,6 +149,15 @@ export default function LocalSightseeingPage() {
           </div>
         </div>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smtoursandtravel.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://smtoursandtravel.com/services" },
+          { "@type": "ListItem", "position": 3, "name": "Local Sightseeing Mysore", "item": "https://smtoursandtravel.com/services/local-sightseeing-taxi-mysore" }
+        ]
+      }) }} />
     </main>
   );
 }

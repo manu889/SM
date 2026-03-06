@@ -5,6 +5,20 @@ import { BUSINESS_INFO } from "@/data/constants";
 export const metadata: Metadata = {
   title: "Tirupati Tour from Mysore | Shirdi Darshan Taxi | Pilgrimage Tours ₹15/km",
   description: "Book pilgrimage tours from Mysore to Tirupati, Shirdi, Dharmasthala, Kukke Subramanya. Comfortable AC cabs, experienced drivers, darshan assistance. Package tours & per km rates available.",
+  alternates: { canonical: "/services/pilgrimage-taxi-mysore" },
+  openGraph: {
+    title: "Pilgrimage Taxi Mysore | Tirupati, Shirdi, Dharmasthala Tours",
+    description: "Book pilgrimage tours from Mysore to Tirupati, Shirdi, Dharmasthala, Kukke Subramanya. Comfortable AC cabs, darshan assistance.",
+    type: "website",
+    url: "https://smtoursandtravel.com/services/pilgrimage-taxi-mysore",
+    images: [{ url: "https://smtoursandtravel.com/logo.png", width: 800, height: 600, alt: "Pilgrimage Tours Mysore - SM Tours" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pilgrimage Taxi Mysore | Tirupati, Shirdi, Dharmasthala Tours",
+    description: "Book pilgrimage tours from Mysore to Tirupati, Shirdi, Dharmasthala. Comfortable AC cabs with darshan assistance.",
+    images: ["https://smtoursandtravel.com/logo.png"],
+  },
 };
 
 export default function PilgrimageToursPage() {
@@ -212,6 +226,15 @@ export default function PilgrimageToursPage() {
           </div>
         </div>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smtoursandtravel.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://smtoursandtravel.com/services" },
+          { "@type": "ListItem", "position": 3, "name": "Pilgrimage Taxi Mysore", "item": "https://smtoursandtravel.com/services/pilgrimage-taxi-mysore" }
+        ]
+      }) }} />
     </main>
   );
 }

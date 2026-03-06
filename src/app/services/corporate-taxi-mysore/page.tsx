@@ -5,6 +5,20 @@ import { BUSINESS_INFO } from "@/data/constants";
 export const metadata: Metadata = {
   title: "Corporate Taxi Mysore | Employee Transport | Business Car Rental ₹13/km",
   description: "Professional corporate taxi service in Mysore. Employee transport, business meetings, airport transfers, client pickups. Reliable vehicles, professional drivers, monthly contracts available.",
+  alternates: { canonical: "/services/corporate-taxi-mysore" },
+  openGraph: {
+    title: "Corporate Taxi Service Mysore | Employee Transport",
+    description: "Professional corporate taxi service in Mysore for employee transport, business meetings, airport transfers. Reliable vehicles, monthly contracts available.",
+    type: "website",
+    url: "https://smtoursandtravel.com/services/corporate-taxi-mysore",
+    images: [{ url: "https://smtoursandtravel.com/logo.png", width: 800, height: 600, alt: "Corporate Taxi Mysore - SM Tours" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Corporate Taxi Service Mysore | Employee Transport",
+    description: "Professional corporate taxi service in Mysore. Employee transport, business meetings, airport transfers.",
+    images: ["https://smtoursandtravel.com/logo.png"],
+  },
 };
 
 export default function CorporateTravelPage() {
@@ -203,6 +217,15 @@ export default function CorporateTravelPage() {
           </div>
         </div>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smtoursandtravel.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://smtoursandtravel.com/services" },
+          { "@type": "ListItem", "position": 3, "name": "Corporate Taxi Mysore", "item": "https://smtoursandtravel.com/services/corporate-taxi-mysore" }
+        ]
+      }) }} />
     </main>
   );
 }

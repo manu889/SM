@@ -6,6 +6,20 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Popular Routes - Mysore to Ooty, Coorg, Bangalore Taxi | Fare ₹11/km",
   description: "Book Mysore taxi for popular routes: Mysore to Ooty (₹2500), Mysore to Coorg (₹2200), Mysore to Bangalore (₹2000), Mysore to Wayanad (₹3200). One way & round trip available. Clean AC cars, 24/7 service.",
+  alternates: { canonical: "/routes" },
+  openGraph: {
+    title: "Popular Taxi Routes from Mysore | Ooty, Coorg, Bangalore Cab Fares",
+    description: "Book Mysore taxi for popular routes: Mysore to Ooty, Coorg, Bangalore, Wayanad. Transparent pricing, clean AC cars, 24/7 service.",
+    type: "website",
+    url: "https://smtoursandtravel.com/routes",
+    images: [{ url: "https://smtoursandtravel.com/logo.png", width: 800, height: 600, alt: "Mysore Taxi Routes - SM Tours" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Popular Taxi Routes from Mysore | Ooty, Coorg, Bangalore",
+    description: "Book Mysore taxi for popular routes: Ooty, Coorg, Bangalore, Wayanad. Transparent pricing, clean AC cars.",
+    images: ["https://smtoursandtravel.com/logo.png"],
+  },
 };
 
 export default function RoutesPage() {
@@ -278,6 +292,14 @@ export default function RoutesPage() {
           </aside>
         </div>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smtoursandtravel.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Popular Routes", "item": "https://smtoursandtravel.com/routes" }
+        ]
+      }) }} />
     </main>
   );
 }

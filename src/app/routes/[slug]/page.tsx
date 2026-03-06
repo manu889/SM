@@ -31,7 +31,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: 'website',
       title,
       description,
-      url: `/routes/${route.slug}`,
+      url: `https://smtoursandtravel.com/routes/${route.slug}`,
+      images: [{ url: 'https://smtoursandtravel.com/logo.png', width: 800, height: 600, alt: `${route.from} to ${route.to} Taxi - SM Tours` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['https://smtoursandtravel.com/logo.png'],
     },
   };
 }
@@ -118,6 +125,37 @@ export default async function RoutePage({ params }: { params: Promise<{ slug: st
                   ))}
                 </div>
               </section>
+            )}
+
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smtoursandtravel.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Popular Routes", "item": "https://smtoursandtravel.com/routes" },
+                    { "@type": "ListItem", "position": 3, "name": `${route.from} to ${route.to} Taxi`, "item": `https://smtoursandtravel.com/routes/${route.slug}` }
+                  ]
+                })
+              }}
+            />
+            {route.faqs?.length > 0 && (
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": route.faqs.map((faq) => ({
+                      "@type": "Question",
+                      "name": faq.question,
+                      "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                    }))
+                  })
+                }}
+              />
             )}
 
             <section className="bg-linear-to-br from-amber-50 to-orange-50 rounded-2xl p-6">

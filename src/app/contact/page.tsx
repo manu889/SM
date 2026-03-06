@@ -5,6 +5,20 @@ import { BUSINESS_INFO } from "@/data/constants";
 export const metadata: Metadata = {
   title: "Contact SM Tours & Travels Mysore | Call +91 6363206398 | 24/7 Taxi Booking",
   description: "Contact SM Tours & Travels for taxi booking in Mysore. Call +91 6363206398 or WhatsApp for instant quotes. Office: Saraswathipuram, Mysuru. 24/7 customer support for outstation & local taxi service.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact SM Tours & Travels Mysore | 24/7 Taxi Booking",
+    description: "Contact SM Tours & Travels for taxi booking in Mysore. Call +91 6363206398 for instant quotes. 24/7 customer support.",
+    type: "website",
+    url: "https://smtoursandtravel.com/contact",
+    images: [{ url: "https://smtoursandtravel.com/logo.png", width: 800, height: 600, alt: "SM Tours & Travels - Contact Us" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact SM Tours & Travels Mysore | 24/7 Taxi Booking",
+    description: "Contact SM Tours & Travels for taxi booking in Mysore. Call +91 6363206398 for instant quotes.",
+    images: ["https://smtoursandtravel.com/logo.png"],
+  },
 };
 
 export default function ContactPage() {
@@ -234,6 +248,14 @@ export default function ContactPage() {
           </aside>
         </div>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smtoursandtravel.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://smtoursandtravel.com/contact" }
+        ]
+      }) }} />
     </main>
   );
 }

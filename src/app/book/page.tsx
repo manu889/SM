@@ -5,6 +5,20 @@ import { BUSINESS_INFO } from "@/data/constants";
 export const metadata: Metadata = {
   title: "Book Mysore Taxi Online | Instant Booking | Call +91 6363206398 | SM Tours",
   description: "Book Mysore taxi online in 2 minutes. Choose from outstation tours, airport transfers, local sightseeing, tempo traveller. Instant confirmation. Pay later. Clean AC cars. 24/7 service. Best rates from ₹11/km.",
+  alternates: { canonical: "/book" },
+  openGraph: {
+    title: "Book Mysore Taxi Online | Instant Booking | SM Tours & Travels",
+    description: "Book Mysore taxi online in 2 minutes. Instant confirmation. Clean AC cars. 24/7 service. Best rates from ₹11/km.",
+    type: "website",
+    url: "https://smtoursandtravel.com/book",
+    images: [{ url: "https://smtoursandtravel.com/logo.png", width: 800, height: 600, alt: "SM Tours & Travels - Book Taxi" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Book Mysore Taxi Online | Instant Booking | SM Tours & Travels",
+    description: "Book Mysore taxi online in 2 minutes. Instant confirmation. Clean AC cars. 24/7 service.",
+    images: ["https://smtoursandtravel.com/logo.png"],
+  },
 };
 
 export default function BookPage() {
@@ -317,6 +331,14 @@ export default function BookPage() {
           </aside>
         </div>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smtoursandtravel.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Book a Cab", "item": "https://smtoursandtravel.com/book" }
+        ]
+      }) }} />
     </main>
   );
 }

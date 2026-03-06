@@ -10,6 +10,20 @@ const HappyCustomers = dynamic(() => import("@/components/HappyCustomers"), {
 export const metadata: Metadata = {
   title: "SM Tours & Travels - Travel Agency Mysore| Taxi, Cab Services in Mysore | Call +91 6363206398",
   description: "Established in 2015, SM Tours & Travels is the best travel agency in Mysore. Premium taxi services, instant cab booking. 4.9★ rated. 24/7 cab services for outstation tours, airport transfers.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About SM Tours & Travels - Best Travel Agency in Mysore",
+    description: "Established in 2015, SM Tours & Travels is the best travel agency in Mysore. Premium taxi services, instant cab booking. 4.9★ rated.",
+    type: "website",
+    url: "https://smtoursandtravel.com/about",
+    images: [{ url: "https://smtoursandtravel.com/logo.png", width: 800, height: 600, alt: "SM Tours & Travels Mysore" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About SM Tours & Travels - Best Travel Agency in Mysore",
+    description: "Established in 2015, SM Tours & Travels is the best travel agency in Mysore. Premium taxi services, instant cab booking. 4.9★ rated.",
+    images: ["https://smtoursandtravel.com/logo.png"],
+  },
 };
 
 export default function AboutPage() {
@@ -191,6 +205,14 @@ export default function AboutPage() {
           </aside>
         </div>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smtoursandtravel.com/" },
+          { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://smtoursandtravel.com/about" }
+        ]
+      }) }} />
     </main>
   );
 }

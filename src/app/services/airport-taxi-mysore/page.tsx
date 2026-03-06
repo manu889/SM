@@ -5,6 +5,20 @@ import { BUSINESS_INFO } from "@/data/constants";
 export const metadata: Metadata = {
   title: "Mysore Airport Taxi | Bangalore Airport Transfer | Kempegowda Airport Cab",
   description: "Book Mysore to Bangalore airport taxi, Kempegowda Airport transfer from Mysore. 24/7 pickup & drop service. Clean AC cars, flight tracking. Starting from ₹11/km.",
+  alternates: { canonical: "/services/airport-taxi-mysore" },
+  openGraph: {
+    title: "Mysore Airport Taxi | Bangalore Airport Transfer",
+    description: "Book Mysore to Bangalore airport taxi. 24/7 pickup & drop. Clean AC cars, flight tracking. Starting from ₹11/km.",
+    type: "website",
+    url: "https://smtoursandtravel.com/services/airport-taxi-mysore",
+    images: [{ url: "https://smtoursandtravel.com/logo.png", width: 800, height: 600, alt: "Mysore Airport Taxi - SM Tours" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mysore Airport Taxi | Bangalore Airport Transfer",
+    description: "Book Mysore to Bangalore airport taxi. 24/7 pickup & drop. Starting from ₹11/km.",
+    images: ["https://smtoursandtravel.com/logo.png"],
+  },
 };
 
 export default function AirportTransfersPage() {
@@ -180,6 +194,15 @@ export default function AirportTransfersPage() {
           </div>
         </div>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smtoursandtravel.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://smtoursandtravel.com/services" },
+          { "@type": "ListItem", "position": 3, "name": "Airport Taxi Mysore", "item": "https://smtoursandtravel.com/services/airport-taxi-mysore" }
+        ]
+      }) }} />
     </main>
   );
 }

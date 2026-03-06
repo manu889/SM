@@ -15,7 +15,20 @@ export const metadata: Metadata = {
     "Wayanad tour from Mysore",
     "Chikmagalur package from Mysore",
     "pilgrimage tours from Mysore"
-  ]
+  ],
+  openGraph: {
+    title: "Mysore Tour Packages - Ooty, Coorg, Wayanad, Chikmagalur | SM Tours",
+    description: "Book Mysore tour packages: Mysore-Ooty one day trip, Coorg package, Wayanad tour, Chikmagalur weekend package. Call +91 6363206398.",
+    type: "website",
+    url: "https://smtoursandtravel.com/packages",
+    images: [{ url: "https://smtoursandtravel.com/logo.png", width: 800, height: 600, alt: "Mysore Tour Packages - SM Tours" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mysore Tour Packages - Ooty, Coorg, Wayanad | SM Tours",
+    description: "Book Mysore tour packages: Ooty, Coorg, Wayanad, Chikmagalur. Customized itineraries with experienced drivers.",
+    images: ["https://smtoursandtravel.com/logo.png"],
+  },
 };
 
 export default function PackagesPage() {
@@ -48,6 +61,14 @@ export default function PackagesPage() {
           </p>
         </div>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smtoursandtravel.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Tour Packages", "item": "https://smtoursandtravel.com/packages" }
+        ]
+      }) }} />
     </main>
   );
 }

@@ -23,10 +23,28 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!tour) return { title: "Tour Not Found" };
   
   const startPrice = tour.pricing.sedan || tour.pricing.suv || tour.pricing.tempo || 0;
-  
+  const ogImage = tour.image
+    ? `https://smtoursandtravel.com${tour.image}`
+    : 'https://smtoursandtravel.com/logo.png';
+  const title = `${tour.title} | From \u20b9${startPrice.toLocaleString()} | SM Tours & Travels Mysore`;
+
   return {
-    title: `${tour.title} | From ₹${startPrice.toLocaleString()} | SM Tours & Travels Mysore`,
+    title,
     description: tour.description,
+    alternates: { canonical: `/tours/${tour.slug}` },
+    openGraph: {
+      title,
+      description: tour.description,
+      type: 'website',
+      url: `https://smtoursandtravel.com/tours/${tour.slug}`,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: tour.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: tour.description,
+      images: [ogImage],
+    },
   };
 }
 
@@ -223,6 +241,20 @@ export default async function TourPackagePage({ params }: { params: Promise<{ sl
 
       {/* Related Tour Packages */}
       <RelatedTourPackages currentTourSlug={tour.slug} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smtoursandtravel.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Tour Packages", "item": "https://smtoursandtravel.com/packages" },
+              { "@type": "ListItem", "position": 3, "name": tour.title, "item": `https://smtoursandtravel.com/tours/${tour.slug}` }
+            ]
+          })
+        }}
+      />
     </main>
   );
 }

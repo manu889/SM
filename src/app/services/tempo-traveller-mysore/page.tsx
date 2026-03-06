@@ -5,6 +5,20 @@ import { BUSINESS_INFO } from "@/data/constants";
 export const metadata: Metadata = {
   title: "Tempo Traveller Mysore | 12 Seater 17 Seater Hire | Group Travel ₹18/km",
   description: "Book tempo traveller in Mysore for group tours, family trips, corporate travel. 12 seater, 17 seater, 20 seater available. AC tempo traveller hire at ₹18/km. Clean vehicles, experienced drivers.",
+  alternates: { canonical: "/services/tempo-traveller-mysore" },
+  openGraph: {
+    title: "Tempo Traveller Mysore | 12 & 17 Seater Hire for Group Travel",
+    description: "Book tempo traveller in Mysore for group tours, family trips. 12 seater, 17 seater available. AC hire at ₹18/km.",
+    type: "website",
+    url: "https://smtoursandtravel.com/services/tempo-traveller-mysore",
+    images: [{ url: "https://smtoursandtravel.com/logo.png", width: 800, height: 600, alt: "Tempo Traveller Mysore - SM Tours" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tempo Traveller Mysore | 12 & 17 Seater Hire",
+    description: "Book tempo traveller in Mysore for group tours, family trips. 12 seater, 17 seater available at ₹18/km.",
+    images: ["https://smtoursandtravel.com/logo.png"],
+  },
 };
 
 export default function TempoTravellerPage() {
@@ -215,6 +229,15 @@ export default function TempoTravellerPage() {
           </div>
         </div>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smtoursandtravel.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://smtoursandtravel.com/services" },
+          { "@type": "ListItem", "position": 3, "name": "Tempo Traveller Mysore", "item": "https://smtoursandtravel.com/services/tempo-traveller-mysore" }
+        ]
+      }) }} />
     </main>
   );
 }

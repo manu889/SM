@@ -7,6 +7,20 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Our Fleet - Dzire, Innova, Crysta, Tempo Traveller | Mysore Taxi Service",
   description: "Choose from our well-maintained AC vehicles: Swift Dzire (₹11/km), Ertiga (₹13/km), Innova (₹15/km), Innova Crysta (₹18/km), Tempo Traveller (₹25/km). Clean cars, professional drivers. Book Mysore taxi now.",
+  alternates: { canonical: "/vehicles" },
+  openGraph: {
+    title: "Our Taxi Fleet - Dzire, Innova, Crysta, Tempo Traveller | Mysore",
+    description: "Choose from our well-maintained AC vehicles for Mysore taxi service. Sedan, SUV, Innova Crysta, Tempo Traveller. Book now!",
+    type: "website",
+    url: "https://smtoursandtravel.com/vehicles",
+    images: [{ url: "https://smtoursandtravel.com/logo.png", width: 800, height: 600, alt: "Mysore Taxi Fleet - SM Tours" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Taxi Fleet - Dzire, Innova, Crysta, Tempo Traveller | Mysore",
+    description: "Choose from our well-maintained AC vehicles for Mysore taxi service. Sedan, SUV, Innova Crysta, Tempo Traveller.",
+    images: ["https://smtoursandtravel.com/logo.png"],
+  },
 };
 
 const vehicleImages: Record<string, string> = {
@@ -292,6 +306,14 @@ export default function VehiclesPage() {
           </aside>
         </div>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smtoursandtravel.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Our Fleet", "item": "https://smtoursandtravel.com/vehicles" }
+        ]
+      }) }} />
     </main>
   );
 }

@@ -62,9 +62,6 @@ export const metadata: Metadata = {
     "Dzire taxi Mysore",
     "Tempo Traveller Mysore",
   ],
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     title: "Taxi Services in Mysore | Best Travel Agency for Cab Booking | SM Tours & Travels",
@@ -73,12 +70,21 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "SM Tours & Travels - Taxi Services in Mysore",
     locale: "en_IN",
+    images: [
+      {
+        url: "https://smtoursandtravel.com/logo.png",
+        width: 800,
+        height: 600,
+        alt: "SM Tours & Travels - Taxi Service in Mysore",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "SM Tours & Travels — Best Travel Agency & Taxi Services in Mysore",
     description:
       "Premium cab services in Mysore - instant cab booking, 50+ cabs available. Call +91 6363206398",
+    images: ["https://smtoursandtravel.com/logo.png"],
   },
 };
 
@@ -193,19 +199,6 @@ export default function RootLayout({
     }
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://smtoursandtravel.com/"
-      }
-    ]
-  };
-
   return (
     <html lang="en">
       <head>
@@ -229,10 +222,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
       </head>
       <body

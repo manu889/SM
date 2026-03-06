@@ -7,6 +7,20 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Outstation Taxi Service Mysore | Mysore to Ooty, Coorg, Bangalore Cab | ₹11/km",
   description: "Book outstation taxi from Mysore to Ooty, Coorg, Bangalore, Wayanad, Chikmagalur at ₹11/km. Clean AC cars, verified drivers, one-way & round trip available. Call +91 6363206398 for instant booking.",
+  alternates: { canonical: "/services/outstation-taxi-mysore" },
+  openGraph: {
+    title: "Outstation Taxi Mysore | Ooty, Coorg, Bangalore Cab from ₹11/km",
+    description: "Book outstation taxi from Mysore to Ooty, Coorg, Bangalore, Wayanad at ₹11/km. Clean AC cars, verified drivers, one-way & round trip available.",
+    type: "website",
+    url: "https://smtoursandtravel.com/services/outstation-taxi-mysore",
+    images: [{ url: "https://smtoursandtravel.com/logo.png", width: 800, height: 600, alt: "Outstation Taxi Mysore - SM Tours" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Outstation Taxi Mysore | Ooty, Coorg, Bangalore Cab",
+    description: "Book outstation taxi from Mysore to Ooty, Coorg, Bangalore. One-way & round trip available from ₹11/km.",
+    images: ["https://smtoursandtravel.com/logo.png"],
+  },
 };
 
 export default function OutstationToursPage() {
@@ -194,6 +208,15 @@ export default function OutstationToursPage() {
           </div>
         </div>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smtoursandtravel.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://smtoursandtravel.com/services" },
+          { "@type": "ListItem", "position": 3, "name": "Outstation Taxi Mysore", "item": "https://smtoursandtravel.com/services/outstation-taxi-mysore" }
+        ]
+      }) }} />
     </main>
   );
 }
