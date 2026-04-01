@@ -32,6 +32,11 @@ export const metadata: Metadata = {
     "Best taxi services in Mysore & travel agency for cab booking. 50+ cabs in Mysore with AC vehicles at ₹11/km. 24/7 cab services for Mysore to Ooty, Coorg, Bangalore. Verified drivers. Call +91 6363206398 for instant booking.",
   applicationName: "SM Tours & Travels",
   generator: "Next.js",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
+  },
   keywords: [
     "Taxi services in Mysore",
     "Travel agency in mysore",
